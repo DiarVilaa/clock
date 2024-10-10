@@ -1,0 +1,136 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.toogle{
+    cursor: pointer;
+    background-color: #000;
+    border: 0;
+    color: #fff;
+    padding: 8px 12px;
+    position: absolute;
+    border-radius: 5px;
+    top: 70px;
+}
+
+html.dark{
+    --primary-color: #fff;
+    --seconary-color: #333;
+}
+
+html.dark{
+    background-color: #111;
+    color: var(--primary-color);
+}
+
+html{
+    transition: all 0.5s ease-in;
+}
+
+:root{
+    --primary-color: #000;
+    --secondary-color: #fff;
+}
+
+.clock-contanier{
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock{
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.clock{
+    background: url("https://i.pinimg.com/564x/b4/3e/fc/b43efcfbf708e68ecbe3cee991e04222.jpg");
+    box-shadow: 6px 6px 66px var(--primary-color);
+    padding: 100px;
+    border-radius: 100%;
+}
+
+
+.needle{
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 65px;
+    width: 3px;
+    transform-origin:bottom center;
+    transition: all 0.5s ease-in;
+    border-radius: 1000%;
+}
+
+.needle.hour{
+ transform: translate(-50%, -100%) rotate(0deg);
+}
+
+.needle.minute{
+    transform: translate(-50%, -100%) rotate(20deg);
+    height: 100px;
+}
+
+.needle.second{
+    transform: translate(-50%, -100%) rotate(40deg);
+    height: 120px;
+    background-color: red;
+    width: 1px;
+}
+
+.center-point{
+    background-color: #e74c3c;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.center-point::after{
+  content: '';
+  background-color: white;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.numbers{
+    color: white;
+}
+.time {
+    margin-top:30px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-shadow: 6px 6px 20px var(--primary-color);
+}
+.date {
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    text-shadow: 2px 2px 8px var(--primary-color)
+}
